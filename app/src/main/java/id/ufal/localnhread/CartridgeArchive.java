@@ -71,7 +71,7 @@ public final class CartridgeArchive {
         ArrayList<String> pages = new ArrayList<>(); JSONArray pageArray = assets.optJSONArray("pages");
         if (pageArray != null) for (int i=0; i<pageArray.length(); i++) pages.add(pageArray.getString(i));
         JSONObject tags = gallery.optJSONObject("tags"); StringBuilder tagText = new StringBuilder();
-        if (tags != null) for (Iterator<String> keys=tags.keys(); keys.hasNext();) { String key=keys.next(); JSONArray values=tags.optJSONArray(key); if (values != null && values.length()>0) { if (tagText.length()>0) tagText.append("\n"); tagText.append(key).append("   "); for(int i=0;i<values.length();i++) { if(i>0) tagText.append(" · "); tagText.append(values.optString(i)); } } }
+        if (tags != null) for (Iterator<String> keys=tags.keys(); keys.hasNext();) { String key=keys.next(); JSONArray values=tags.optJSONArray(key); if (values != null && values.length()>0) { if (tagText.length()>0) tagText.append("\n"); tagText.append(key).append("   "); for(int i=0;i<values.length();i++) { if(i>0) tagText.append(" "); tagText.append(values.optString(i)); } } }
         return new Cartridge(uri, modified, gallery.optString("id"), gallery.optString("title", gallery.optString("title_jp")), gallery.optString("title_jp"), gallery.optString("language", "unknown"), gallery.optString("scanlator"), tagText.toString(), date(gallery.optJSONObject("uploaded")), date(gallery.optJSONObject("archived")), assets.isNull("cover") ? null : assets.optString("cover", null), pages, cover);
     }
     private static String date(JSONObject object) { return object == null ? "unknown" : object.optString("date", "unknown"); }
