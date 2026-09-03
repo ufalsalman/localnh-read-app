@@ -1,0 +1,9 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/readerRoot" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background">
+    <ImageView android:id="@+id/pageImage" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null" android:scaleType="fitCenter" />
+    <ProgressBar android:id="@+id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:background="#CC111111" android:gravity="center" android:orientation="horizontal" android:padding="8dp">
+        <Button android:id="@+id/previousButton" style="@style/Widget.LocalNHRead.Button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="prev" />
+        <TextView android:id="@+id/pageIndicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="14dp" android:textColor="@color/text_primary" />
+        <Button android:id="@+id/nextButton" style="@style/Widget.LocalNHRead.Button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="next" />
+    </LinearLayout>
+</FrameLayout>

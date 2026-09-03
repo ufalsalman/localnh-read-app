@@ -1,0 +1,3 @@
+<resources>
+    <string name="app_name">localnh-read</string><string name="choose_folder">choose library folder</string><string name="change_folder">change folder</string><string name="rescan">rescan</string><string name="empty_title">no cartridges yet</string><string name="empty_body">choose the folder containing your .lnhc files. your original files will not be changed.</string><string name="folder_access_error">could not save folder access.</string><string name="scanning_library">scanning library…</string><string name="folder_lost">the folder can no longer be read. choose it again.</string><string name="book_count">%1$s · %2$d books</string><string name="no_folder_selected">no library folder selected</string><string name="read">read</string>
+</resources>
