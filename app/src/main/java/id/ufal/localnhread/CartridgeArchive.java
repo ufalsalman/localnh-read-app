@@ -28,6 +28,9 @@ public final class CartridgeArchive {
         return new Cartridge(uri, modified, data.id, data.title, data.titleJp, data.language, data.scanlator,
                 data.tagsText, data.uploaded, data.archived, data.coverPath, data.pages, cover);
     }
+    @Nullable public static Bitmap thumbnail(Context context, Uri uri, String entryPath) throws IOException {
+        return entryPath == null ? null : bitmapFromUri(context, uri, entryPath, 360);
+    }
     public static File cacheArchive(Context context, Uri uri, long modified) throws IOException {
         File folder = new File(context.getCacheDir(), "cartridges");
         if (!folder.exists() && !folder.mkdirs()) throw new IOException("could not create cache");
