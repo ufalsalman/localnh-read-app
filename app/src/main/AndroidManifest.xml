@@ -6,6 +6,7 @@
         android:theme="@style/Theme.LocalNHRead">
         <activity android:name=".ReaderActivity" android:exported="false" />
         <activity android:name=".GalleryActivity" android:exported="false" />
+        <activity android:name=".SearchActivity" android:exported="false" />
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
