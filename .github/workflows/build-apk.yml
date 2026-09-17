@@ -22,7 +22,10 @@ jobs:
           java-version: '17'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          # The old `tools` package was removed from modern command-line tools.
+          packages: platform-tools
 
       - name: Install Android 35 build tools
         run: |
